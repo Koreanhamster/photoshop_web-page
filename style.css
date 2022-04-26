@@ -58,16 +58,43 @@ body {
 
 .card {
   display: block;
+  position: relative;
   width: 24rem;
   background-color: #111;
   color: white;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 1.5rem;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 11px 0 11px 11px;
+  border-color: transparent #111;
+  display: block;
+  width: 0;
+  z-index: 10;
+  right: -11px;
+  top: 45%;
+}
+
+.card:nth-child(even)::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 11px 11px 11px 0;
+  border-color: transparent #111;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -11px;
+  top: 45%;
 }
 
 .card img {
   width: 5rem;
-  margin-top: -3rem;
+  margin-top: -4rem;
 }
 
 .flex {
@@ -86,5 +113,33 @@ body {
   color: #1c90ff;
   font-size: 4rem;
   font-weight: bolder;
-  margin-top: -2.5rem;
+  margin: -2.5rem 0 -1rem 0;
+  font-family: 'Kanit', sans-serif;
+}
+
+.box-inside {
+  width: 100%;
+  background-color: #000;
+  margin: 1rem auto -1.5rem auto;
+  padding: 1rem;
+  border-radius: 15px 15px 0 0;
+  color: #7c7c7c;
+  font-size: 0.8rem;
+}
+
+.box-inside li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.box-inside li::before {
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  border-radius: 50px;
+  background-color: #7c7c7c;
+  top: 6px;
+  left: 0;
 }
