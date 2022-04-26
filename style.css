@@ -1,0 +1,90 @@
+body {
+  height: 100vh;
+  background-color: #222;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background: url(images/cover.png) no-repeat center;
+  background-size: cover;
+  height: 50vh;
+  margin-top: -18vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.spare-txt {
+  font-size: 12px;
+}
+
+.name-title {
+  margin-bottom: 10px;
+  letter-spacing: 0.4rem;
+  position: relative;
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.name-title::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 10.5rem;
+  background: #255499;
+  position: absolute;
+  border-radius: 20px;
+  top: 0.6rem;
+  left: 0.25rem;
+  z-index: -1;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.card:nth-child(odd) {
+  margin-left: -55%;
+}
+
+.card:nth-child(even) {
+  margin-left: 55%;
+}
+
+.card {
+  display: block;
+  width: 24rem;
+  background-color: #111;
+  color: white;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.card img {
+  width: 5rem;
+  margin-top: -3rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: end;
+}
+
+.align-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card span {
+  display: block;
+  color: #1c90ff;
+  font-size: 4rem;
+  font-weight: bolder;
+  margin-top: -2.5rem;
+}
