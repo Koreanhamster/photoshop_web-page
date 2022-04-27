@@ -46,6 +46,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 6rem 0;
+  height: 100%;
 }
 
 .card:nth-child(odd) {
@@ -90,6 +91,38 @@ body {
   z-index: 1;
   left: -11px;
   top: 45%;
+}
+
+.card:nth-child(odd)::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border: 3px solid #1c90ff;
+  background-color: #222;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  top: 47%;
+  right: -1.6rem;
+  z-index: 50;
+}
+
+.card:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border: 3px solid #1c90ff;
+  background-color: #222;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  top: 47%;
+  left: -1.6rem;
+  z-index: 50;
+}
+
+.card:nth-child::before(2) {
+  top: 5.5rem;
 }
 
 .card img {
@@ -142,4 +175,15 @@ body {
   background-color: #7c7c7c;
   top: 6px;
   left: 0;
+}
+
+.main::before {
+  content: '';
+  display: block;
+  background-color: #1c90ff;
+  position: absolute;
+  width: 0.25rem;
+  height: 270%;
+  /* 왜 height가 이렇게해야만 뷰포트 최하단까지 가는건지.. 잘 모르겠습니다 부모인 main기준에서 100%를 주면 알아서 height가 꽉 찰 줄 알았는데 그게 아니네요. bottom을 0을 주어보았는데 밑으로 쭉 늘어나지 않습니다. 도저히 모르겠습니다!!*/
+  margin-top: 5.5rem;
 }
