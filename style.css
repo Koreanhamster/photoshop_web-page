@@ -47,6 +47,7 @@ body {
   align-items: center;
   padding: 6rem 0;
   height: 100%;
+  position: relative;
 }
 
 .card:nth-child(odd) {
@@ -183,7 +184,6 @@ body {
   background-color: #1c90ff;
   position: absolute;
   width: 0.25rem;
-  height: 270%;
-  /* 왜 height가 이렇게해야만 뷰포트 최하단까지 가는건지.. 잘 모르겠습니다 부모인 main기준에서 100%를 주면 알아서 height가 꽉 찰 줄 알았는데 그게 아니네요. bottom을 0을 주어보았는데 밑으로 쭉 늘어나지 않습니다. 도저히 모르겠습니다!!*/
+  height: 100%;
   margin-top: 5.5rem;
 }
